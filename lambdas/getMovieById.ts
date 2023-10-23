@@ -15,7 +15,7 @@ export const handler: APIGatewayProxyHandlerV2 = async (event, context) => { // 
     const parameters  = event?.pathParameters;
     const movieId = parameters?.movieId ? parseInt(parameters.movieId) : undefined;
     const cast = event.queryStringParameters?.cast === "true" ? true : false;
-    
+      
 
     if (!movieId) {
       return {
@@ -50,7 +50,7 @@ export const handler: APIGatewayProxyHandlerV2 = async (event, context) => { // 
     if(cast){
 
     const input: QueryCommandInput = {
-      TableName: process.env.TABLE_NAME,
+      TableName: "MovieCast",
         KeyConditionExpression: "movieId = :m",
         ExpressionAttributeValues: {
           ":m": movieId,
