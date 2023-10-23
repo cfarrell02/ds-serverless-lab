@@ -19,6 +19,7 @@
     "inlineSourceMap": true,
     "inlineSources": true,
     "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "strictPropertyInitialization": false,
     "typeRoots": [
       "./node_modules/@types"
@@ -28,4 +29,8 @@
     "node_modules",
     "cdk.out"
   ]
+  ,
+  "include": [
+    "shared/*.json"
+  ]  
 }
